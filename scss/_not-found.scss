@@ -1,0 +1,44 @@
+.not-found {
+   padding-top: 80px;
+   height: 100vh ;
+   width: 100vw;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   justify-content: center;
+   &__body {
+      border-radius: 12px;
+      padding: 20px 30px;
+      background: $black;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 25px;
+      color: $white;
+   }
+   &__text{
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 25px;
+      color: $white;
+   }
+   &__link{
+      transition: .3s;
+      color: $white;
+   }
+   &__link:hover{
+      color: $mainColor1;
+   }
+   @media only screen and (max-width:500px) {
+      &__body {
+         font-size: 20px;
+         line-height: 20px;
+      }
+      &__img{
+         width: 280px;
+      }
+   }
+}
+

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- adapted -->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <!-- logo web site -->
+   <link rel="shortcut icon" href="./img/logo_nn.png">
+   <link rel="mainfest" href="./img/logo_nn.png">
+   <!-- main color seb page -->
+   <meta name="theme-color" content="#333">
+   <!-- description -->
+   <meta name="keywords" content="neural , network , art , image , images , in oil , dall-e-2">
+   <meta name="description"
+      content="Web page with images created by DALL-E neural network. The ideas of the images belong to the creator of the page (Deacon Daniel).">
+   <!-- autor -->
+   <meta name="author" content="Diacon Daniel">
+   <!-- name -->
+   <meta propert="og:title" content="NeuralEye">
+   <!-- description -->
+   <meta propert="og:description"
+      content="Web page with images created by DALL-E neural network. The ideas of the images belong to the creator of the page (Deacon Daniel).">
+   <!-- logo -->
+   <meta propert="og:image" content="./img/logo_nn.png">
+   <meta property="og:image:width" content="300" />
+   <meta property="og:image:height" content="300" />
+   <!-- style css -->
+   <link rel="stylesheet" href="./css/lightbox.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>NeuralEye</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <!-- loading page -->
+      <div class="loader" id="loader">
+         <div class="spinner"></div>
+      </div>
+
+      <!--header-->
+      <header class="header" id="navbar">
+         <div class="container">
+            <div class="header__body">
+               <!-- logo -->
+               <div class="header__box_logo" id="logo">
+                  <div class="header__logo">
+                     <img src="./img/logo_nn.png" alt="">
+                  </div>
+               </div>
+
+               <!-- button burger -->
+               <div class="header__box_burger">
+                  <div class="header__burger" id="burger">
+                     <span class="header__line" id="burger"></span>
+                  </div>
+               </div>
+
+               <nav class="header__menu" id="menu">
+                  <!-- list -->
+                  <ul class="header__list">
+                     <!-- items list -->
+                     <li class="header__item active">
+                        <a href="./index.html" class="header__link">
+                           <!--name link-->
+                           <div class="header__top">
+                              <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
+                                 <path fill="currentColor"
+                                    d="M11.002 2.388a1.5 1.5 0 0 0-2.005 0l-5.5 4.942A1.5 1.5 0 0 0 3 8.445V15.5A1.5 1.5 0 0 0 4.5 17h2A1.5 1.5 0 0 0 8 15.5v-4a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v4a1.5 1.5 0 0 0 1.5 1.5h2a1.5 1.5 0 0 0 1.5-1.5V8.445a1.5 1.5 0 0 0-.497-1.115l-5.5-4.942Z" />
+                              </svg>
+                           </div>
+                           <div class="header__bottom">
+                              home
+                           </div>
+                        </a>
+                     </li>
+                     <li class="header__item">
+                        <a href="./index.html#home" class="header__link">
+                           <!--name link-->
+                           <div class="header__top">
+                              <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M8 17h5q.425 0 .713-.288Q14 16.425 14 16t-.287-.713Q13.425 15 13 15H8q-.425 0-.713.287Q7 15.575 7 16t.287.712Q7.575 17 8 17Zm0-4h8q.425 0 .712-.288Q17 12.425 17 12t-.288-.713Q16.425 11 16 11H8q-.425 0-.713.287Q7 11.575 7 12t.287.712Q7.575 13 8 13Zm0-4h8q.425 0 .712-.288Q17 8.425 17 8t-.288-.713Q16.425 7 16 7H8q-.425 0-.713.287Q7 7.575 7 8t.287.712Q7.575 9 8 9ZM5 21q-.825 0-1.413-.587Q3 19.825 3 19V5q0-.825.587-1.413Q4.175 3 5 3h14q.825 0 1.413.587Q21 4.175 21 5v14q0 .825-.587 1.413Q19.825 21 19 21Z" />
+                              </svg>
+                           </div>
+                           <div class="header__bottom">
+                              about
+                           </div>
+                        </a>
+                     </li>
+                     <li class="header__item">
+                        <a href="./index.html#gallery" class="header__link">
+                           <!--name link-->
+                           <div class="header__top">
+                              <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M3 19q-.825 0-1.412-.587Q1 17.825 1 17V7q0-.825.588-1.412Q2.175 5 3 5h10q.825 0 1.413.588Q15 6.175 15 7v10q0 .825-.587 1.413Q13.825 19 13 19Zm15-8q-.425 0-.712-.288Q17 10.425 17 10V6q0-.425.288-.713Q17.575 5 18 5h4q.425 0 .712.287Q23 5.575 23 6v4q0 .425-.288.712Q22.425 11 22 11ZM5 15h6q.3 0 .45-.275q.15-.275-.05-.525l-1.625-2.175q-.15-.2-.4-.2t-.4.2L7.5 14l-.975-1.3q-.15-.2-.4-.2t-.4.2L4.6 14.2q-.2.25-.05.525Q4.7 15 5 15Zm13 4q-.425 0-.712-.288Q17 18.425 17 18v-4q0-.425.288-.713Q17.575 13 18 13h4q.425 0 .712.287q.288.288.288.713v4q0 .425-.288.712Q22.425 19 22 19Z" />
+                              </svg>
+                           </div>
+                           <div class="header__bottom">
+                              Gallery
+                           </div>
+                        </a>
+                     </li>
+                     <li class="header__item">
+                        <a href="./index.html#collection" class="header__link">
+                           <!--name link-->
+                           <div class="header__top">
+                              <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 20 20">
+                                 <path fill="currentColor"
+                                    d="M15.5 7a2.5 2.5 0 0 1 2.495 2.335l.006.164v6a2.5 2.5 0 0 1-2.336 2.495l-.164.005h-6a2.5 2.5 0 0 1-2.495-2.336l-.005-.164v-6a2.5 2.5 0 0 1 2.336-2.495L9.5 7h6Zm-2.999 2a.5.5 0 0 0-.492.41l-.008.09V12H9.5l-.09.007a.5.5 0 0 0 0 .984l.09.008H12v2.5l.008.09a.5.5 0 0 0 .984 0L13 15.5V13h2.5l.09-.008a.5.5 0 0 0 0-.984L15.5 12H13V9.5l-.008-.09A.5.5 0 0 0 12.5 9Zm.162-5.306l.048.158l.575 2.147H9.001a3 3 0 0 0-2.995 2.824l-.005.176v5.348a2.502 2.502 0 0 1-2.31-1.683l-.052-.17l-1.553-5.795a2.5 2.5 0 0 1 1.61-3.015l.158-.047l5.795-1.553a2.5 2.5 0 0 1 2.957 1.458l.057.152Z" />
+                              </svg>
+                           </div>
+                           <div style="font-size: 10px;" class="header__bottom">
+                              collection
+                           </div>
+                        </a>
+                     </li>
+                     <li class="header__item">
+                        <a target="_blank" href="https://openai.com/dall-e-2/" class="header__link">
+                           <!--name link-->
+                           <div class="header__top">
+                              <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83l3.75 3.75l1.83-1.83z" />
+                              </svg>
+                           </div>
+                           <div class="header__bottom">
+                              create
+                           </div>
+                        </a>
+                     </li>
+                     <li class="header__item">
+                        <a href="./sign.html" class="header__link">
+                           <!--name link-->
+                           <div class="header__top">
+                              <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                 <path fill="currentColor"
+                                    d="M6 17c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6m9-9a3 3 0 0 1-3 3a3 3 0 0 1-3-3a3 3 0 0 1 3-3a3 3 0 0 1 3 3M3 5v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2Z" />
+                              </svg>
+                           </div>
+                           <div style="font-size: 11px;" class="header__bottom">
+                              Account
+                           </div>
+                        </a>
+                     </li>
+
+                     <li class="header__item">
+                        <a href="./not-found.html" class="header__link">
+                           <!--name link-->
+                           <div class="header__top">
+                              <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                 <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M3 7v4a1 1 0 0 0 1 1h3m0-5v10m3-9v8a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1h-2a1 1 0 0 0-1 1zm7-1v4a1 1 0 0 0 1 1h3m0-5v10" />
+                              </svg>
+                           </div>
+                        </a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </header>
+
+      <!--main-->
+      <main class="main">
+         <section class="sign">
+            <div class="container">
+               <div class="sign__body">
+                  <div class="sign__wrapper" id="sign__wrapper">
+                     <div class="sign__form-container sign__sign-up-container">
+                        <form class="sign__form" action="#">
+                           <h1 class="sign__title">Create Account</h1>
+                           <div class="sign__social-container">
+                              <a href="#" class="sign__social">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                       d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                                 </svg>
+                              </a>
+                              <a href="#" class="sign__social">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                       d="m473.16 221.48l-2.26-9.59H262.46v88.22H387c-12.93 61.4-72.93 93.72-121.94 93.72c-35.66 0-73.25-15-98.13-39.11a140.08 140.08 0 0 1-41.8-98.88c0-37.16 16.7-74.33 41-98.78s61-38.13 97.49-38.13c41.79 0 71.74 22.19 82.94 32.31l62.69-62.36C390.86 72.72 340.34 32 261.6 32c-60.75 0-119 23.27-161.58 65.71C58 139.5 36.25 199.93 36.25 256s20.58 113.48 61.3 155.6c43.51 44.92 105.13 68.4 168.58 68.4c57.73 0 112.45-22.62 151.45-63.66c38.34-40.4 58.17-96.3 58.17-154.9c0-24.67-2.48-39.32-2.59-39.96Z" />
+                                 </svg>
+                              </a>
+                              <a href="#" class="sign__social">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <circle cx="4.983" cy="5.009" r="2.188" fill="currentColor" />
+                                    <path fill="currentColor"
+                                       d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118c1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783c-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z" />
+                                 </svg>
+                              </a>
+                           </div>
+                           <span class="sign__span">or use your email for registration</span>
+                           <input name="name" class="sign__input" type="text" placeholder="Name" />
+                           <input name="email" class="sign__input" type="email" placeholder="Email" />
+                           <input name="password" class="sign__input" type="password" placeholder="Password" />
+                           <button class="sign__btn">Sign Up</button>
+                        </form>
+                     </div>
+                     <div class="sign__form-container sign__sign-in-container">
+                        <form class="sign__form" action="#">
+                           <h1 class="sign__title">Sign in</h1>
+                           <div class="sign__social-container">
+                              <a href="#" class="sign__social">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <path fill="currentColor"
+                                       d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14c-.326-.043-1.557-.14-2.857-.14C11.928 2 10 3.657 10 6.7v2.8H7v4h3V22h4v-8.5z" />
+                                 </svg>
+                              </a>
+                              <a href="#" class="sign__social">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512">
+                                    <path fill="currentColor"
+                                       d="m473.16 221.48l-2.26-9.59H262.46v88.22H387c-12.93 61.4-72.93 93.72-121.94 93.72c-35.66 0-73.25-15-98.13-39.11a140.08 140.08 0 0 1-41.8-98.88c0-37.16 16.7-74.33 41-98.78s61-38.13 97.49-38.13c41.79 0 71.74 22.19 82.94 32.31l62.69-62.36C390.86 72.72 340.34 32 261.6 32c-60.75 0-119 23.27-161.58 65.71C58 139.5 36.25 199.93 36.25 256s20.58 113.48 61.3 155.6c43.51 44.92 105.13 68.4 168.58 68.4c57.73 0 112.45-22.62 151.45-63.66c38.34-40.4 58.17-96.3 58.17-154.9c0-24.67-2.48-39.32-2.59-39.96Z" />
+                                 </svg>
+                              </a>
+                              <a href="#" class="sign__social">
+                                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                                    <circle cx="4.983" cy="5.009" r="2.188" fill="currentColor" />
+                                    <path fill="currentColor"
+                                       d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118c1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783c-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66H9.237zm-6.142 0H6.87v12.139H3.095z" />
+                                 </svg>
+                              </a>
+                           </div>
+                           <span class="sign__span">or use your account</span>
+                           <input name="email" class="sign__input" type="email" placeholder="Email" />
+                           <input name="password" class="sign__input" type="password" placeholder="Password" />
+                           <a class="sign__link" href="#">Forgot your password?</a>
+                           <button class="sign__btn">Sign In</button>
+                        </form>
+                     </div>
+                     <div class="sign__overlay-container">
+                        <div class="sign__overlay">
+                           <div class="sign__overlay-panel sign__overlay-left">
+                              <h1 class="sign__title">Welcome Back!</h1>
+                              <p class="sign__text text">To keep connected with us please login with your personal info
+                              </p>
+                              <button class="sign__ghost" id="signIn">Sign In</button>
+                           </div>
+                           <div class="sign__overlay-panel sign__overlay-right">
+                              <h1 class="sign__title">Hello, Friend!</h1>
+                              <p class="sign__text text">Enter your personal details and start journey with us</p>
+                              <button class="sign__ghost" id="signUp">Sign Up</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <script>
+               let signUpButton = document.getElementById('signUp');
+               let signInButton = document.getElementById('signIn');
+               let signWrapper = document.getElementById('sign__wrapper');
+
+               signUpButton.onclick = function () {
+                  signWrapper.classList.add('right-panel-active');
+               };
+               signInButton.onclick = function () {
+                  signWrapper.classList.remove('right-panel-active');
+               };
+            </script>
+         </section>
+      </main>
+
+      <!-- footer -->
+      <footer class="footer" id="footer">
+         <div class="container">
+            <div class="footer__body">
+               <div class="footer__row">
+                  <div class="footer__block">
+                     <div class="footer__logo">
+                        <img src="./img/logo_nn.png" alt="" class="footer__img">
+                     </div>
+                     <p class="footer__name_company">NeuralEye</p>
+                  </div>
+                  <div class="footer__block">
+                     <h3 class="footer__title title">Useful Links</h3>
+                     <ul class="footer__list">
+                        <li class="footer__item text">
+                           <a href="#">About</a>
+                        </li>
+                        <li class="footer__item text">
+                           <a href="#">Police policy</a>
+                        </li>
+                        <li class="footer__item text">
+                           <a href="#">More</a>
+                        </li>
+                        <li class="footer__item text">
+                           <a href="#">Contact</a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="footer__block">
+                     <h3 class="footer__title title">Social Networks</h3>
+                     <ul class="footer__list">
+                        <li class="footer__item text">
+                           <a href="#">Facebook</a>
+                        </li>
+                        <li class="footer__item text">
+                           <a href="#">Instagram</a>
+                        </li>
+                        <li class="footer__item text">
+                           <a href="#">Telegram</a>
+                        </li>
+                        <li class="footer__item text">
+                           <a href="#">Behance</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="footer__copy copy">
+                  <p class="copy__text">© 2020 - 2022 NeuralEye • About • Privacy Policy</p>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- import zoom img -->
+      <script src="./js/lightbox-plus-jquery.js"></script>
+      <!-- link jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- import slider -->
+      <script src="js/slick.min.js"></script>
+      <!-- import scroll-out -->
+      <script src="js/scroll-out.js"></script>
+      <!-- javascript code -->
+      <script src="js/script.js"></script>
+   </div>
+</body>
+
+</html>
