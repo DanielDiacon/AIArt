@@ -203,7 +203,7 @@ main {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: 9px solid #3f41c2;
+  border: 9px solid #4259D4;
   -webkit-animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
           animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;
 }
@@ -459,12 +459,12 @@ main {
   transition: 0.3s;
 }
 .header__item.active {
-  background: #50c9b5;
+  background: #4BA2C0;
   transition: 0.3s;
   border-radius: 6px;
 }
 .header__item:hover {
-  background: rgba(80, 201, 181, 0.8);
+  background: rgba(75, 162, 192, 0.8);
   border-radius: 6px;
 }
 .header__link {
@@ -546,7 +546,7 @@ main {
   color: #1d1d1d;
 }
 .footer__item:hover a {
-  color: #3f41c2;
+  color: #4259D4;
 }
 
 .copy__text {
@@ -607,7 +607,7 @@ main {
   border-radius: 6px;
   display: inline-block;
   padding: 10px 20px;
-  background: linear-gradient(90deg, #593fc2, #50c9b5);
+  background: linear-gradient(90deg, #4259D4, #50c9b5);
   background-size: 101%;
   background-position: center;
   transition: 0.3s;
@@ -755,7 +755,7 @@ main {
   align-items: start;
 }
 .form__row__input:checked {
-  background: #3f41c2;
+  background: #4259D4;
 }
 .form__label {
   font-size: 16px;
@@ -789,7 +789,7 @@ main {
   border-radius: 6px;
   display: inline-block;
   padding: 10px 20px;
-  background: linear-gradient(45deg, #3f41c2, #50c9b5);
+  background: linear-gradient(45deg, #4259D4, #50c9b5);
   background-size: 101%;
   background-position: center;
   transition: 0.3s;
@@ -1061,7 +1061,7 @@ main {
   color: #fff;
 }
 .not-found__link:hover {
-  color: #3f41c2;
+  color: #4259D4;
 }
 @media only screen and (max-width: 500px) {
   .not-found__body {
@@ -1076,7 +1076,7 @@ main {
 .sign__btn {
   border-radius: 20px;
   border: 1px solid transparent;
-  background: linear-gradient(60deg, #3f41c2, #50c9b5);
+  background: linear-gradient(60deg, #4259D4, #50c9b5);
   background-size: 101%;
   background-position: center;
   color: #fff;
@@ -1264,7 +1264,7 @@ main {
   }
 }
 .sign__overlay {
-  background: linear-gradient(to right, #3f41c2, #50c9b5);
+  background: linear-gradient(to right, #4259D4, #50c9b5);
   background-position: 0 0;
   color: #fff;
   position: relative;
@@ -1276,7 +1276,7 @@ main {
 }
 @media only screen and (max-width: 991.98px) {
   .sign__overlay {
-    background: linear-gradient(45deg, #3f41c2, #50c9b5);
+    background: linear-gradient(45deg, #4259D4, #50c9b5);
     left: 0;
     bottom: 0;
     height: 100%;

@@ -14,7 +14,7 @@
          position: relative;
 		}
       &__a{
-         color: #50c9b5;
+         color: $mainColor2;
          font-weight: 600;
       }
 		&__title {
@@ -31,7 +31,7 @@
          border-radius: 6px;
          display: inline-block;
          padding: 10px 20px;
-         background:linear-gradient(90deg , #593fc2 ,#50c9b5);
+         background:linear-gradient(90deg , $mainColor1 ,$mainColor2);
          background-size:101%;
          background-position: center;
          transition: .3s;
