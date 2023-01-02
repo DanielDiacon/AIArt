@@ -3,17 +3,21 @@
 let body = document.querySelector('body');
 const burger = document.getElementById('burger');
 const menu = document.getElementById('menu');
+const logo = document.getElementById('logo');
 
+logo.onclick = function () {
+   logo.classList.toggle('active');
+};
 
 burger.onclick = function () {
-   burger.classList.toggle('active')
-   menu.classList.toggle('active')
+   burger.classList.toggle('active');
+   menu.classList.toggle('active');
 };
 
 document.onclick = function (e) {
    if (e.target.id !== 'burger' && e.target.classList !== 'menu' && e.target.id !== 'logo') {
-      burger.classList.remove('active')
-      menu.classList.remove('active')
+      burger.classList.remove('active');
+      menu.classList.remove('active');
    }
 };
 // <=>
