@@ -17,6 +17,7 @@
       color: transparent;
       opacity: 0.8;
       transition: 0.3s;
+      background: #000;
    }
    .slick-arrow:active {
       opacity: 1;
@@ -73,7 +74,7 @@
    border-radius: 12px;
    cursor: pointer;
    margin: 10px;
-   background: $black;
+   background: $white;
    flex: 1 1 auto;
    box-shadow: $boxShadow;
    &__wrapper {
@@ -101,7 +102,7 @@
       margin: 10px;
       font-size: 14px;
       font-weight: 700;
-      color: $white;
+      color: $black;
       @media only screen and (max-width: $mobile) {
          font-size: 18px;
          line-height: 18px;
