@@ -1169,7 +1169,7 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 30px 10px;
+  margin: 100px 10px;
 }
 .sign__wrapper {
   background-color: #fff;
@@ -1180,7 +1180,6 @@ main {
   width: 100%;
   max-width: 100%;
   min-height: 500px;
-  height: 100vh;
 }
 @media only screen and (max-width: 991.98px) {
   .sign__body {
