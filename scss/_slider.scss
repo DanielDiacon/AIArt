@@ -71,6 +71,7 @@
    }
 }
 .collection {
+   z-index: 1009;
    border-radius: 12px;
    cursor: pointer;
    margin: 10px;
@@ -107,5 +108,34 @@
          font-size: 18px;
          line-height: 18px;
       }
+   }
+   &__wrapper-img {
+      position: relative;
+	}
+	&__zoom {
+      z-index:1010;
+      position: absolute;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      color: $black;
+      background:rgba(
+            $color: $white,
+            $alpha: 0.6,
+         );
+      font-size: 20px;
+      margin: 5px;
+      padding: 5px;
+      border-radius: 6px;
+      pointer-events: none;
+      opacity: 0;
+      transition: 0.2s;
+      @media only screen and (max-width:$mobile) {
+         opacity:1;
+      }
+	}
+   &__wrapper-img:hover .collection__zoom{
+      opacity: 1;
+      transition: .3s;
    }
 }

@@ -37,7 +37,33 @@
       transition: .4s;
    }
    &__item:hover &__img{
-      transform: scale(1.05);
+      transform: scale(1.03);
+   }
+   .item__zoom{
+      z-index:1010;
+      position: absolute;
+      color: $black;
+      background:rgba(
+            $color: $white,
+            $alpha: 0.6,
+         );
+      width: 30px;
+      height: 30px;
+      font-size: 20px;
+      margin: 5px;
+      padding: 5px;
+      border-radius: 6px;
+      pointer-events: none;
+      opacity: 0;
+      transition: .3s;
+      @media only screen and (max-width:$mobile) {
+
+         opacity:1;
+      }
+   }
+   &__item:hover .item__zoom{
+      opacity: 1;
+      transition: .3s;
    }
 }
 

@@ -1,9 +1,11 @@
 
 .intro {
-   min-height: 800px;
+   min-height: 700px;
    height: 100vh;
+   max-height: 700px;
    @media only screen and (max-width:$mobile) { 
       min-height: 550px;
+      max-height: 100vh;
    } 
 		&__body {
          padding-top: 100px;

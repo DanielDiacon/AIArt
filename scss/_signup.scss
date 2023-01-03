@@ -4,7 +4,11 @@
    position: relative;
    height: calc(100vh - 80px);
    width: 100vw;
+   max-height: 800px;
    background: linear-gradient(38deg, #e39191 0%, #38acfc 100%);
+   @media only screen and (max-width:$mobile) { 
+      max-height: 100vh;
+   } 
    &__body {
       margin: 0 auto;
       position: relative;

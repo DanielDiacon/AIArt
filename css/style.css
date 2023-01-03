@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
+:root {
+  --doc-height: 100%;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -80,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   min-height: -webkit-fill-available;
+  height: var(--doc-height);
   line-height: 18px;
   caret-color: red;
   font-family: "Montserrat", sans-serif;
@@ -574,12 +579,14 @@ main {
   }
 }
 .intro {
-  min-height: 800px;
+  min-height: 700px;
   height: 100vh;
+  max-height: 700px;
 }
 @media only screen and (max-width: 767.98px) {
   .intro {
     min-height: 550px;
+    max-height: 100vh;
   }
 }
 .intro__body {
@@ -714,7 +721,13 @@ main {
   position: relative;
   height: calc(100vh - 80px);
   width: 100vw;
+  max-height: 800px;
   background: linear-gradient(38deg, #e39191 0%, #38acfc 100%);
+}
+@media only screen and (max-width: 767.98px) {
+  .signup {
+    max-height: 100vh;
+  }
 }
 .signup__body {
   margin: 0 auto;
@@ -912,7 +925,31 @@ main {
   transition: 0.4s;
 }
 .gallery__item:hover .gallery__img {
-  transform: scale(1.05);
+  transform: scale(1.03);
+}
+.gallery .item__zoom {
+  z-index: 1010;
+  position: absolute;
+  color: #1d1d1d;
+  background: rgba(255, 255, 255, 0.6);
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.3s;
+}
+@media only screen and (max-width: 767.98px) {
+  .gallery .item__zoom {
+    opacity: 1;
+  }
+}
+.gallery__item:hover .item__zoom {
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .collections__title {
@@ -988,6 +1025,7 @@ main {
 }
 
 .collection {
+  z-index: 1009;
   border-radius: 12px;
   cursor: pointer;
   margin: 10px;
@@ -1028,6 +1066,34 @@ main {
     font-size: 18px;
     line-height: 18px;
   }
+}
+.collection__wrapper-img {
+  position: relative;
+}
+.collection__zoom {
+  z-index: 1010;
+  position: absolute;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  color: #1d1d1d;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 6px;
+  pointer-events: none;
+  opacity: 0;
+  transition: 0.2s;
+}
+@media only screen and (max-width: 767.98px) {
+  .collection__zoom {
+    opacity: 1;
+  }
+}
+.collection__wrapper-img:hover .collection__zoom {
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .not-found {
@@ -1103,7 +1169,6 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
   margin: 30px 10px;
 }
 .sign__wrapper {
@@ -1115,12 +1180,11 @@ main {
   width: 100%;
   max-width: 100%;
   min-height: 500px;
+  height: 100vh;
 }
 @media only screen and (max-width: 991.98px) {
   .sign__body {
     margin: 0;
-    min-height: -webkit-fill-available;
-    -webkit-bleedingedgethingy: 1;
   }
   .sign__wrapper {
     display: flex;
@@ -1128,14 +1192,15 @@ main {
     border-radius: 0px;
     max-width: 100%;
     box-shadow: none;
-    min-height: -webkit-fill-available;
+    height: var(--doc-height);
+    transition: 0.5s;
   }
 }
 .sign__form-container {
   position: absolute;
   top: 0;
   height: 100%;
-  transition: all 0.6s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 @media only screen and (max-width: 991.98px) {
   .sign__form-container {
@@ -1252,7 +1317,7 @@ main {
   width: 50%;
   height: 100%;
   overflow: hidden;
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.5s ease-in-out;
   z-index: 10;
 }
 @media only screen and (max-width: 991.98px) {
@@ -1273,7 +1338,7 @@ main {
   height: 100%;
   width: 200%;
   transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 @media only screen and (max-width: 991.98px) {
   .sign__overlay {
@@ -1297,7 +1362,7 @@ main {
   height: 100%;
   width: 50%;
   transform: translateX(0);
-  transition: transform 0.6s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 @media only screen and (max-width: 991.98px) {
   .sign__overlay-panel {
@@ -1388,8 +1453,8 @@ main {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
-  -webkit-animation: show 0.6s;
-          animation: show 0.6s;
+  -webkit-animation: show 0.5s;
+          animation: show 0.5s;
 }
 
 @media only screen and (max-width: 991.98px) {

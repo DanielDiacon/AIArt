@@ -30,7 +30,6 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 100vh;
       margin: 30px 10px;
 	}
 	&__wrapper {
@@ -42,12 +41,11 @@
       width: 100%;
       max-width: 100%;
       min-height:500px;
+      height: 100vh;
 	}
    @media only screen and (max-width:$tablet) {
       &__body {
          margin:0;
-         min-height: -webkit-fill-available;
-         -webkit-bleedingedgethingy: 1;
       }
       &__wrapper {
          display: flex;
@@ -55,14 +53,15 @@
          border-radius: 0px;
          max-width: 100%;
          box-shadow:none;
-         min-height: -webkit-fill-available;
+         height: var(--doc-height); 
+         transition: .5s;
       }
    }
 	&__form-container {
       position: absolute;
       top: 0;
       height: 100%;
-      transition: all 0.6s ease-in-out;
+      transition: all .5s ease-in-out;
 	}
    @media only screen and (max-width:$tablet) {
       &__form-container {
@@ -179,7 +178,7 @@
       width: 50%;
       height: 100%;
       overflow: hidden;
-      transition: transform 0.6s ease-in-out;
+      transition: transform .5s ease-in-out;
       z-index: 10;
 	}
    @media only screen and (max-width:$tablet) {
@@ -200,7 +199,7 @@
       height: 100%;
       width: 200%;
       transform: translateX(0);
-      transition: transform 0.6s ease-in-out;
+      transition: transform .5s ease-in-out;
 	}
    @media only screen and (max-width:$tablet) {
       &__overlay {
@@ -224,7 +223,7 @@
       height: 100%;
       width: 50%;
       transform: translateX(0);
-      transition: transform 0.6s ease-in-out;
+      transition: transform .5s ease-in-out;
 	}
    @media only screen and (max-width:$tablet) {
       &__overlay-panel {
@@ -305,7 +304,7 @@
    transform: translateX(100%);
    opacity: 1;
    z-index: 5;
-   animation: show 0.6s;
+   animation: show .5s;
 }
 @media only screen and (max-width:$tablet) {
    .sign__wrapper.right-panel-active .sign__sign-up-container {
